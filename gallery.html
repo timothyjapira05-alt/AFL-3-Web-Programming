@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Photo Gallery — Timothy Japira. A collection of moments and memories captured through the lens." />
+  <title>Photo Gallery | Timothy Japira</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="gallery.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="Home.html" class="nav-logo" id="nav-logo-link">
+        <div class="logo-box">
+           <img src="logo.png" alt="Timothy Japira" class="nav-logo" id="nav-logo-link" />
+        </div>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="Home.html"    class="nav-link"        id="nav-home">Home</a></li>
+        <li><a href="article.html" class="nav-link"        id="nav-article">Article</a></li>
+        <li><a href="Gallery.html" class="nav-link active" id="nav-gallery">Photo Gallery</a></li>
+        <li><a href="Home.html#contact" class="nav-btn"   id="nav-contact-btn">Contact Me</a></li>
+      </ul>
+      <button class="middle"  aria-label="Toggle Menu">
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== GALLERY HEADER ===== -->
+  <header class="gallery-header" id="gallery-header">
+    <div class="gallery-header-content">
+      <h1 class="gallery-main-title" id="gallery-page-title">Photo Gallery</h1>
+      <div class="gallery-title-underline"></div>
+    </div>
+  </header>
+
+  <!-- ===== CAROUSEL SECTION ===== -->
+  <section class="carousel-section" id="carousel-section">
+    <div class="carousel-wrapper" id="carousel-wrapper">
+
+      <!-- TRACK -->
+      <div class="carousel-track" id="carousel-track">
+
+        <!-- Slide 1 — Volleyball Court (Active) -->
+        <div class="carousel-slide active" id="slide-1" data-index="1">
+          <div class="slide-inner">
+            <img src="image 5.png" alt="Volleyball" class="slide-img" />
+            <div class="slide-overlay active-overlay">
+              <p class="slide-quote">
+                Volleyball is not just a sport, but it is where passion meets discipline,<br />
+                where sweat turns into strength,<br />
+                where strangers become family,<br />
+                and every jump feels like chasing the sky.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 — Photography Hobby -->
+        <div class="carousel-slide" id="slide-2" data-index="3">
+          <div class="slide-inner">
+            <img src="image 6.png" alt="Photography" class="slide-img" />
+            <div class="slide-overlay active-overlay">
+              <p class="slide-quote">
+                Volleyball ort, but it is where passion meets discipline,<br />
+                where sweat turns into strength,<br />
+                where strangers become family,<br />
+                and every jump feels like chasing the sky.
+              </p>
+              <span class="slide-date">15/01/2026</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 — Gym Hobby -->
+        <div class="carousel-slide" id="slide-3" data-index="4">
+          <div class="slide-inner">
+            <img src="image 7.png" alt="Gym" class="slide-img" />
+            <div class="slide-overlay">
+              <span class="slide-date">02/03/2026</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.carousel-track -->
+
+      <!-- Arrows -->
+      <button class="carousel-arrow arrow-prev" id="arrow-prev" aria-label="Previous">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="carousel-arrow arrow-next" id="arrow-next" aria-label="Next">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+
+      <!-- Dots -->
+      <div class="carousel-dots" id="carousel-dots">
+        <button class="dot" id="dot-0" aria-label="Slide 1"></button>
+        <button class="dot active" id="dot-1" aria-label="Slide 2"></button>
+        <button class="dot" id="dot-2" aria-label="Slide 3"></button>
+       
+      </div>
+
+    </div><!-- /.carousel-wrapper -->
+  </section>
+
+  <!-- ===== GET IN TOUCH ===== -->
+  <section class="get-in-touch" id="get-in-touch">
+    <div class="gallery-container">
+      <div class="touch-card" id="touch-card">
+        <h2 class="touch-title">Get in Touch</h2>
+        <p class="touch-subtitle">For business and partnership inquiry please contact me below!</p>
+
+        <div class="touch-items">
+          <div class="touch-item" id="touch-phone">
+            <div class="touch-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="touch-info">
+              <span class="touch-label">Phone</span>
+              <span class="touch-value">0822-2831-8168</span>
+            </div>
+          </div>
+
+          <div class="touch-item" >
+            <div class="touch-icon"><i class="fas fa-envelope"></i></div>
+            <div class="touch-info">
+              <span class="touch-label">Email</span>
+              <span class="touch-value">tjapira01@student.ciputra.ac.id</span>
+            </div>
+          </div>
+
+          <div class="touch-item" id="touch-address">
+            <div class="touch-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="touch-info">
+              <span class="touch-label">Address</span>
+              <span class="touch-value">Universitas Ciputra Surabaya</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FIND ME ON ===== -->
+  <section class="social-section" id="social">
+    <div class="gallery-container">
+      <div class="social-content">
+        <h2 class="social-heading" >Find Me On</h2>
+        <div class="social-links" >
+          <a href="https://www.instagram.com/timothy_japira?igsh=MTBtNHl4cXpxdXJtYw==" class="social-btn" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/qr/Y2BQQBVTBUAJJ1" class="social-btn"  aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/timothy-japira-360aa237a?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="social-btn" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <div class="logo-box"><span class="logo-text">TJ</span></div>
+        <span class="footer-name">Timothy Japira</span>
+      </div>
+      <p class="footer-copy">&copy; 2026 Timothy Japira. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="Home.html"    id="footer-home">Home</a>
+        <a href="article.html" id="footer-article">Article</a>
+        <a href="Gallery.html" id="footer-gallery">Gallery</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="gallery.js"></script>
+</body>
+</html>

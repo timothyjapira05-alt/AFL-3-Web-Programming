@@ -1,0 +1,318 @@
+.gallery-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* header galeri */
+.gallery-header {
+  padding: 120px 24px 48px;
+  text-align: center;
+  background: var(--bg-dark);
+}
+
+.gallery-header-content {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-main-title {
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+
+.gallery-title-underline {
+  width: 120px;
+  height: 4px;
+  background: var(--gradient-btn);
+  border-radius: 2px;
+}
+
+/* carousel */
+.carousel-section {
+  background: var(--bg-dark);
+  padding: 20px 0 80px;
+}
+
+.carousel-wrapper {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.carousel-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 340px;
+}
+
+/* kartu kartu */
+.carousel-slide {
+  flex-shrink: 0;
+  width: 180px;
+  height: 250px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  opacity: 0.45;
+  transform: scale(0.88);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+}
+
+.carousel-slide.hidden {
+  display: none;
+}
+
+.carousel-slide.active {
+  width: 320px;
+  height: 300px;
+  opacity: 1;
+  transform: scale(1);
+  border-color: rgba(123, 92, 245, 0.5);
+  box-shadow: 0 8px 40px rgba(123, 92, 245, 0.3);
+  z-index: 2;
+}
+
+.slide-inner {
+  width: 100%; height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide:hover .slide-img {
+  transform: scale(1.05);
+}
+
+.slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10,10,15,0.85) 0%, transparent 60%);
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+}
+
+.slide-date {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--purple-light);
+  letter-spacing: 0.5px;
+}
+
+.active-overlay {
+  background: linear-gradient(to top, rgba(10,10,15,0.92) 0%, rgba(10,10,15,0.45) 55%, transparent 100%);
+  align-items: flex-end;
+  padding: 20px 18px;
+}
+
+.slide-quote {
+  font-size: 0.78rem;
+  color: var(--text-primary);
+  line-height: 1.75;
+  font-weight: 400;
+}
+
+/* tanda panah */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%);
+  width: 40px; height: 40px;
+  background: rgba(16,16,32,0.75);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: var(--transition);
+  z-index: 10;
+  backdrop-filter: blur(8px);
+}
+.carousel-arrow:hover {
+  background: var(--gradient-btn);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 0 20px var(--purple-glow);
+}
+.arrow-prev { left: 0; }
+.arrow-next { right: 0; }
+
+/* titik titik */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.dot {
+  width: 28px; height: 4px;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0;
+}
+.dot.active {
+  background: var(--purple);
+  width: 44px;
+  box-shadow: 0 0 10px var(--purple-glow);
+}
+.dot:hover:not(.active) {
+  background: rgba(123,92,245,0.4);
+}
+
+/* get in touch */
+.get-in-touch {
+  background: var(--bg-dark);
+  padding: 0 0 80px;
+}
+
+.touch-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+.touch-card::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 280px; height: 280px;
+  background: radial-gradient(circle, rgba(123,92,245,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.touch-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.touch-subtitle {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-bottom: 36px;
+  line-height: 1.6;
+}
+
+.touch-items {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.touch-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.touch-item:hover .touch-icon {
+  background: var(--gradient-btn);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 0 20px var(--purple-glow);
+}
+
+.touch-icon {
+  width: 44px; height: 44px;
+  background: rgba(123,92,245,0.1);
+  border: 1.5px solid var(--border);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.95rem;
+  color: var(--purple-light);
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.touch-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.touch-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.touch-value {
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* sosial */
+.social-section {
+  background: #0A0A20;
+  padding: 60px 0;
+  border-top: 1px solid var(--border);
+}
+
+.social-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.social-heading {
+  margin: 0;
+  line-height: 1;          
+  display: flex;
+  align-items: center; 
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .carousel-slide { width: 130px; height: 200px; }
+  .carousel-slide.active { width: 240px; height: 260px; }
+  .touch-card { padding: 32px 24px; }
+  .social-content { flex-direction: column; gap: 24px; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .carousel-slide { width: 85px; height: 150px; }
+  .carousel-slide.active { width: 190px; height: 230px; }
+  .slide-quote { font-size: 0.7rem; }
+}

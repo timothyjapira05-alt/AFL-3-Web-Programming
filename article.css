@@ -1,0 +1,299 @@
+/* container */
+.article-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* bagian hero */
+.page-hero {
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-dark);
+  overflow: hidden;
+  padding-top: 68px; 
+}
+
+.page-hero-bg-text {
+  position: absolute;
+  font-size: clamp(6rem, 20vw, 14rem);
+  font-weight: 900;
+  color: rgba(123, 92, 245, 0.06);
+  letter-spacing: 0.15em;
+  text-align: center;
+  user-select: none;
+  white-space: nowrap;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.page-hero-title {
+  font-size: clamp(2.4rem, 7vw, 4rem);
+  font-weight: 900;
+  letter-spacing: 0.25em;
+  color: var(--text-primary);
+  text-shadow: 0 0 60px rgba(123, 92, 245, 0.3);
+}
+
+/* bagian values */
+.values {
+  background: var(--bg-dark);
+  padding: 60px 0 80px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.value-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+/* Icon circle */
+.value-icon-wrap {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.value-icon {
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at 40% 35%, #2A1A6E 0%, #150D3D 60%, #0A0818 100%);
+  border: 2px solid rgba(123, 92, 245, 0.35);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  color: var(--purple-light);
+  position: relative;
+  z-index: 1;
+  transition: var(--transition);
+  box-shadow: 0 0 30px rgba(123, 92, 245, 0.2), inset 0 0 30px rgba(123, 92, 245, 0.08);
+}
+
+.value-icon-ring {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 1px solid rgba(123, 92, 245, 0.15);
+  animation: ringPulse 3s ease-in-out infinite;
+}
+
+.value-card:hover .value-icon {
+  border-color: var(--purple);
+  box-shadow: 0 0 50px rgba(123, 92, 245, 0.45), inset 0 0 40px rgba(123, 92, 245, 0.15);
+  color: #fff;
+  transform: scale(1.06);
+}
+
+.value-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.3px;
+}
+
+.value-desc {
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  text-align: justify;
+}
+
+/* bagian hobi */
+.hobby {
+  background: linear-gradient(180deg, var(--bg-dark) 0%, #0D0D20 100%);
+  padding: 20px 0 80px;
+}
+
+.hobby-title {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 48px;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hobby-title::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--gradient-btn);
+  border-radius: 2px;
+  margin: 10px auto 0;
+}
+
+/* kartu hobby */
+.hobby-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 24px;
+  transition: var(--transition);
+  position: relative;
+}
+
+.hobby-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--gradient-btn);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.hobby-card:hover {
+  border-color: rgba(123, 92, 245, 0.4);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow), 0 0 32px rgba(123, 92, 245, 0.15);
+}
+
+.hobby-card:hover::before {
+  opacity: 1;
+}
+
+/* gambar hobby */
+.hobby-img-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.hobby-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.hobby-card:hover .hobby-img {
+  transform: scale(1.07);
+}
+
+.hobby-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    transparent 60%,
+    var(--bg-card) 100%
+  );
+}
+
+/* Hobby */
+.hobby-text {
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+}
+
+.hobby-text p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 2;
+  font-weight: 400;
+}
+
+.hobby-text p br + br {
+  margin-bottom: 2px;
+}
+
+/* bagian sosial */
+.social-section {
+  background: #0A0A20;
+  padding: 40px 0;
+  border-top: 1px solid var(--border);
+}
+
+.social-content {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.social-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* animasi */
+@keyframes ringPulse {
+  0%, 100% { transform: scale(1);   opacity: 0.4; }
+  50%       { transform: scale(1.1); opacity: 0.8; }
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .hobby-card {
+    grid-template-columns: 1fr;
+  }
+
+  .hobby-img-wrap {
+    height: 200px;
+  }
+
+  .hobby-img-overlay {
+    background: linear-gradient(
+      to bottom,
+      transparent 60%,
+      var(--bg-card) 100%
+    );
+  }
+
+  .hobby-text {
+    padding: 20px 24px 28px;
+  }
+
+  .social-content {
+    flex-direction: column;
+    gap: 28px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hobby-text p {
+    font-size: 0.82rem;
+    line-height: 1.85;
+  }
+}

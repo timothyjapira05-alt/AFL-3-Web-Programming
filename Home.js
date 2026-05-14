@@ -1,6 +1,4 @@
-// ========================================
-// MOBILE MENU TOGGLE
-// ========================================
+
 document.addEventListener('DOMContentLoaded', function() {
   const mobileToggle = document.getElementById('middle');
   const navbarMenu = document.getElementById('nav-links');
@@ -11,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
       navbarMenu.classList.toggle('active');
     });
 
-    // Close menu when clicking a link (mobile)
     const menuLinks = navbarMenu.querySelectorAll('a');
     menuLinks.forEach(link => {
       link.addEventListener('click', () => {

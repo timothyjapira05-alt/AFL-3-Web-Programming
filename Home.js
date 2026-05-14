@@ -2,8 +2,8 @@
 // MOBILE MENU TOGGLE
 // ========================================
 document.addEventListener('DOMContentLoaded', function() {
-  const mobileToggle = document.getElementById('mobileToggle');
-  const navbarMenu = document.getElementById('navbarMenu');
+  const mobileToggle = document.getElementById('middle');
+  const navbarMenu = document.getElementById('nav-links');
 
   if (mobileToggle && navbarMenu) {
     mobileToggle.addEventListener('click', function() {

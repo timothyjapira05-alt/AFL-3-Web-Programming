@@ -808,7 +808,7 @@ img { display: block; max-width: 100%; }
     gap: 8px;
     border-bottom: 1px solid var(--border);
   }
-  .nav-links.open { display: flex; }
+  .nav-links.active { display: flex; }
   .nav-btn { margin-left: 0; }
   .middle { display: flex;
           z-index: 1001;}

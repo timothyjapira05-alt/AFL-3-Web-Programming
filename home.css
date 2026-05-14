@@ -99,6 +99,7 @@ img { display: block; max-width: 100%; }
 
 .nav-links {
   display: flex; align-items: center; gap: 6px;
+  z-index: 999
 }
 
 .nav-link {
@@ -147,6 +148,7 @@ img { display: block; max-width: 100%; }
 }
 
 .middle {
+  z-index: 1001
   display: none;
   flex-direction: column;
   gap: 5px;
